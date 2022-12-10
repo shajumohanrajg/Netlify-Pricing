@@ -13,6 +13,60 @@
   }
 }
 
+.equal-height-JlocK {
+  display:block;
+  overflow:hidden;
+  transition-property:height
+}
+.crdbgclr{
+  background-color: #fafbfb;
+}
+.cnt {
+  width: 59%;
+  margin: 0% auto 5% auto;
+}
+.card:hover{
+  box-shadow: -1px 10px 29px 0px rgba(0,0,0,0.8);
+}
+
+.txtcnt {
+  width: 65%;
+  margin: 0% auto !important;
+}
+.bordertop{
+  border-top: #61dafb;
+}
+.buttonclr
+{
+
+  
+  background-color: '#0063cc';
+  border-color:  '#0063cc';
+  border-radius: 50%;
+}
+.smltxt {
+  font-size: 10px;
+  font-weight: bold;
+  color: #a49c90;
+  padding-left: 10px;
+}
+
+.algncnt {
+  align-items: center;
+
+  font-size: 28px;
+}
+
+.crdbgclr {
+  background-color: #fafbfb;
+}
+.mrg{
+  width: 100%;
+}
+
+.fntname {
+  font-family: 'Poppins', sans-serif !important;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
