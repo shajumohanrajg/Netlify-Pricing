@@ -361,8 +361,83 @@ export default function BasicGrid() {
   const classes = useStyles();
   return (
     
-    <Box sx={{ background: "#bbe4c3" }}>
+    <Box sx={{ background: "white" }}>
+   <Grid
+    container
+    spacing={1}
+    direction="row"
+    justifyContent="center"
+    alignItems="center"
+    alignContent="center"
   
+    
+  >
+    <Grid xs={8}>
+      <Item  sx={{
+            
+            borderRadius: 5,
+            boxShadow: "10px 10px 10px black",
+          }}>
+      <Accordion
+         sx={{
+            padding:'20px',
+         border:'none',boxShadow:'none'
+        }}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography variant="" sx={{textAlign:'left'}}>
+              <Box
+                variant="Body2"
+                sx={{ fontSize: "40px", fontWeight: "bold" }}
+              >
+                {" "}
+                <SupportAgentIcon
+                  color="primary"
+                  sx={{ fontWeight: "fontWeightbold", fontSize: 45 }}
+                />{" "}
+                Support
+              </Box>
+              <Box sx={{ fontSize: "25px", pl: 8 }}>
+                Email support is available for customers on Pro plans and above.
+                Upgrade to an Enterprise plan for guaranteed response times and
+                support via Slack or phone.
+              </Box>
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <TableContainer component={Paper}>
+              <Table className={classes.table} aria-label="simple table">
+                <TableHead sx={{ border: 1 }}>
+                  <TableRow>
+                    <TableCell align="center"></TableCell>
+                    <TableCell align="center">Email Support</TableCell>
+                    <TableCell align="center">Business Day Support</TableCell>
+                    <TableCell align="center">
+                      24×7×365 Premium Support
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {rows1.map((row) => (
+                    <TableRow key={row.name}>
+                      <TableCell align="center">{row.sfield1}</TableCell>
+                      <TableCell align="center">{row.sfield2}</TableCell>
+                      <TableCell align="center">{row.sfield3}</TableCell>
+                      <TableCell align="center">{row.sfield4}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </AccordionDetails>
+        </Accordion>
+      </Item>
+    </Grid>
+    
       <div>
         <Typography
           variant="h2"
