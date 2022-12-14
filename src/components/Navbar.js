@@ -79,16 +79,16 @@ const useStyles = makeStyles({
     fontFamily: ['"Montserrat"', "Open Sans"].join(","),
   },
   customTableContainer: {
-    overflowX: "initial"
+    overflowX: "initial",
   },
   head: {
     backgroundColor: "#fff",
     position: "sticky",
-    top: 0
+    top: 0,
   },
   table: {
     minWidth: 100,
-width:'100%',
+    width: "100%",
     "& .MuiTableCell-root": {
       border: "1px solid rgba(224, 224, 224, 1)",
       height: 35,
@@ -371,7 +371,12 @@ export default function BasicGrid() {
       <div sx={{ padding: "70px" }}>
         <Typography
           variant="h2"
-          sx={{ fontWeight: "bold", textAlign: "center", padding: "25px",paddingTop:'80px' }}
+          sx={{
+            fontWeight: "bold",
+            textAlign: "center",
+            padding: "25px",
+            paddingTop: "80px",
+          }}
         >
           Netlify Pricing
         </Typography>
@@ -408,7 +413,7 @@ export default function BasicGrid() {
                   sx={{
                     maxWidth: 345,
                     paddingBottom: "20px",
-                    height:'190px',
+                    height: "190px",
                     border: "none",
                     boxShadow: "none",
                   }}
@@ -488,8 +493,8 @@ export default function BasicGrid() {
 
                 borderRadius: 2,
                 padding: "20px",
-                border:4 ,
-                borderColor:'#30c8c9',
+                border: 4,
+                borderColor: "#30c8c9",
                 borderTopLeftRadius: 50,
               }}
             >
@@ -505,8 +510,8 @@ export default function BasicGrid() {
                     paddingBottom: "20px",
                     border: "none",
                     boxShadow: "none",
-                    
-                    height:'190px',
+
+                    height: "190px",
                   }}
                 >
                   <CardContent>
@@ -620,7 +625,7 @@ export default function BasicGrid() {
                     paddingBottom: "20px",
                     border: "none",
                     boxShadow: "none",
-                    height:'190px',
+                    height: "190px",
                   }}
                 >
                   <CardContent>
@@ -746,7 +751,7 @@ export default function BasicGrid() {
                     paddingBottom: "20px",
                     border: "none",
                     boxShadow: "none",
-                    height:'190px', 
+                    height: "190px",
                   }}
                 >
                   <CardContent>
@@ -839,7 +844,7 @@ export default function BasicGrid() {
         </Grid>
       </div>
       <br></br>
-  
+
       <Box sx={{ padding: "50px" }}>
         <Typography
           variant="h5"
@@ -849,11 +854,14 @@ export default function BasicGrid() {
         </Typography>
       </Box>
       <div>
-    
-        <TableContainer sx={{ justifyContent: "center" }} className={classes.head}>
+        <TableContainer
+          sx={{ justifyContent: "center" }}
+          className={classes.head}
+        >
           <Table
-            className={classes.table1} 
-            stickyHeader aria-label="sticky table"
+            className={classes.table1}
+            stickyHeader
+            aria-label="sticky table"
           >
             <TableHead sx={{ border: 1 }}>
               <TableRow>
@@ -953,9 +961,9 @@ export default function BasicGrid() {
                   </Card>
                 </TableCell>
               </TableRow>
-              <TableRow >
-                <TableCell align="" colSpan={4} >
-                  <Typography variant="h5" >
+              <TableRow>
+                <TableCell align="" colSpan={4}>
+                  <Typography variant="h5">
                     Only pay for the capacity you use
                   </Typography>
                 </TableCell>
@@ -973,7 +981,6 @@ export default function BasicGrid() {
             </TableBody>
           </Table>
         </TableContainer>
-        
       </div>
       <br></br>
       <div>
@@ -1043,549 +1050,587 @@ export default function BasicGrid() {
         </div>
         <br></br>
         <Grid
-    container
-    spacing={4}
-    direction="row"
-    justifyContent="center"
-    alignItems="center"
-    alignContent="center"
-  
-    
-  >
-    <Grid xs={7.5} >
-      <Item  sx={{
-            
-            borderRadius: 5,
-            boxShadow: "10px 10px 10px black",
-          }}>
-      <Accordion
-         sx={{
-            padding:'20px',
-         border:'none',boxShadow:'none'
-        }}
+          container
+          spacing={4}
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          alignContent="center"
         >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography variant="" sx={{textAlign:'left'}}>
-              <Box
-                variant="Body2"
-                sx={{ fontSize: "40px", fontWeight: "bold" }}
-              >
-                {" "}
-                <SupportAgentIcon
-                  color="primary"
-                  sx={{ fontWeight: "fontWeightbold", fontSize: 45 }}
-                />{" "}
-                Support
-              </Box>
-              <Box sx={{ fontSize: "25px", pl: 8 }}>
-                Email support is available for customers on Pro plans and above.
-                Upgrade to an Enterprise plan for guaranteed response times and
-                support via Slack or phone.
-              </Box>
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <TableContainer component={Paper}>
-              <Table className={classes.table} aria-label="simple table">
-                <TableHead sx={{ border: 1 }}>
-                  <TableRow>
-                    <TableCell align="center"></TableCell>
-                    <TableCell align="center">Email Support</TableCell>
-                    <TableCell align="center">Business Day Support</TableCell>
-                    <TableCell align="center">
-                      24×7×365 Premium Support
-                    </TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {rows1.map((row) => (
-                    <TableRow key={row.name}>
-                      <TableCell align="center">{row.sfield1}</TableCell>
-                      <TableCell align="center">{row.sfield2}</TableCell>
-                      <TableCell align="center">{row.sfield3}</TableCell>
-                      <TableCell align="center">{row.sfield4}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </AccordionDetails>
-        </Accordion>
-      </Item>
-    </Grid>
-    
- 
-        <br></br>
- 
-    <Grid xs={7.5}>
-      <Item  sx={{
-            borderRadius: 5,
-            boxShadow: "10px 10px 10px black",
-          }}>
-      <Accordion
-         sx={{
-            padding:'20px',
-         border:'none',boxShadow:'none'
-        }}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography variant="" sx={{textAlign:'left' }}>
-              <Box
-                variant="Body2"
-                sx={{ fontSize: "40px", fontWeight: "bold",}}
-              >
-                {" "}
-                <LanIcon
-                  color="primary"
-                  sx={{ fontWeight: "fontWeightbold", fontSize: 45 }}
-                />{" "}
-                High-Performance Edge
-              </Box>
-              <Box sx={{ fontSize: "25px", pl: 8 }}>
-                The premium network for mission-critical applications.
-                Experience 30-50% faster response time and more global POPs,
-                backed by a 99.99% uptime SLA.
-              </Box>
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <TableContainer component={Paper}>
-              <Table className={classes.table} aria-label="simple table">
-                <TableHead sx={{ border: 1 }}>
-                  <TableRow>
-                    <TableCell align="center"></TableCell>
-                    <TableCell align="center">Standard</TableCell>
-                    <TableCell align="center">High-Performance</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {rows2.map((row) => (
-                    <TableRow key={row.name}>
-                      <TableCell align="center">{row.hp1field1}</TableCell>
-                      <TableCell align="center">{row.hp1field2}</TableCell>
-                      <TableCell align="center">{row.hp1field3}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </AccordionDetails>
-        </Accordion>
-        
-          
-        </Item>
-        </Grid>
-        
-        <br></br>
- 
-    <Grid xs={7.5}>
-      <Item  sx={{
-            
-            borderRadius: 5,
-            boxShadow: "10px 10px 10px black",
-          }}>
-      <Accordion
-         sx={{
-            padding:'20px',
-         border:'none',boxShadow:'none'
-        }}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography variant="" sx={{textAlign:'left'}}>
-              <Box
-                variant="Body2"
-                sx={{ fontSize: "40px", fontWeight: "bold" }}
-              >
-                {" "}
-                <BuildIcon
-                  color="primary"
-                  sx={{ fontWeight: "fontWeightbold", fontSize: 45 }}
-                />{" "}
-                High-Performance Build{" "}
-              </Box>
-              <Box sx={{ fontSize: "25px", pl: 8 }}>
-                The premium build environment with more concurrency and
-                processing power.
-              </Box>
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <TableContainer component={Paper}>
-              <Table className={classes.table} aria-label="simple table">
-                <TableHead sx={{ border: 1 }}>
-                  <TableRow>
-                    <TableCell align="center"></TableCell>
-                    <TableCell align="center">Standard</TableCell>
-                    <TableCell align="center">High-Performance</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {rows3.map((row) => (
-                    <TableRow key={row.name}>
-                      <TableCell align="center">{row.hp2field1}</TableCell>
-                      <TableCell align="center">{row.hp2field2}</TableCell>
-                      <TableCell align="center">{row.hp2field3}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </AccordionDetails>
-        </Accordion>
-        </Item>
-        </Grid>
-        <br></br>
-        <div>
-          <Box
-            sx={{ padding: 8, justifyContent: "center", alignItems: "center" }}
-          >
-            <Typography
-              variant="h2"
-              sx={{ fontWeight: "bold", textAlign: "center" }}
+          <Grid xs={7.5}>
+            <Item
+              sx={{
+                borderRadius: 5,
+                boxShadow: "10px 10px 10px black",
+              }}
             >
-              Per-site add-ons
-            </Typography>
-            <Typography variant="body1" sx={{ textAlign: "center" }}>
-              Extend your site for free with basic access to add-ons.
-              Automatically upgrade tiers as your usage grows, paying only for
-              what you use.
-            </Typography>
-          </Box>
-        </div>
-        <br></br>
-        <Grid xs={7.5}>
-      <Item  sx={{
-            
-            borderRadius: 5,
-            boxShadow: "10px 10px 10px black",
-          }}>
-      <Accordion
-         sx={{
-            padding:'20px',
-         border:'none',boxShadow:'none'
-        }}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography variant="" sx={{textAlign:'left'}}>
-              <Box
-                variant="Body2"
-                sx={{ fontSize: "40px", fontWeight: "bold" }}
+              <Accordion
+                sx={{
+                  padding: "20px",
+                  border: "none",
+                  boxShadow: "none",
+                }}
               >
-                {" "}
-                <AnalyticsIcon
-                  sx={{
-                    fontWeight: "fontWeightbold",
-                    fontSize: 45,
-                    color: "#30c8c9",
-                  }}
-                />{" "}
-                Analytics{" "}
-              </Box>
-              <Box sx={{ fontSize: "25px", pl: 8 }}>
-                Netlify Analytics uses data captured directly from our servers,
-                presented simply and beautifully. Find better accuracy,
-                performance and privacy for your users.
-              </Box>
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails >
-            <TableContainer component={Paper}>
-              <Table className={classes.table} aria-label="simple table">
-                <TableHead sx={{ border: 1 }}>
-                  <TableRow>
-                    <TableCell align="center"></TableCell>
-                    <TableCell align="center">Level 1</TableCell>
-                    <TableCell align="center">Level 2</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {rows4.map((row) => (
-                    <TableRow key={row.name}>
-                      <TableCell align="center">{row.afield1}</TableCell>
-                      <TableCell align="center">{row.afield2}</TableCell>
-                      <TableCell align="center">{row.afield3}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </AccordionDetails>
-        </Accordion>
-        </Item></Grid>
-        <br></br>
-        <Grid xs={7.5}>
-      <Item  sx={{
-            
-            borderRadius: 5,
-            boxShadow: "10px 10px 10px black",
-          }}>
-      <Accordion
-         sx={{
-            padding:'20px',
-         border:'none',boxShadow:'none'
-        }}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography variant="" sx={{textAlign:'left'}}>
-              <Box
-                variant="Body2"
-                sx={{ fontSize: "40px", fontWeight: "bold" }}
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="" sx={{ textAlign: "left" }}>
+                    <Box
+                      variant="Body2"
+                      sx={{ fontSize: "40px", fontWeight: "bold" }}
+                    >
+                      {" "}
+                      <SupportAgentIcon
+                        color="primary"
+                        sx={{ fontWeight: "fontWeightbold", fontSize: 45 }}
+                      />{" "}
+                      Support
+                    </Box>
+                    <Box sx={{ fontSize: "25px", pl: 8 }}>
+                      Email support is available for customers on Pro plans and
+                      above. Upgrade to an Enterprise plan for guaranteed
+                      response times and support via Slack or phone.
+                    </Box>
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <TableContainer component={Paper}>
+                    <Table className={classes.table} aria-label="simple table">
+                      <TableHead sx={{ border: 1 }}>
+                        <TableRow>
+                          <TableCell align="center"></TableCell>
+                          <TableCell align="center">Email Support</TableCell>
+                          <TableCell align="center">
+                            Business Day Support
+                          </TableCell>
+                          <TableCell align="center">
+                            24×7×365 Premium Support
+                          </TableCell>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
+                        {rows1.map((row) => (
+                          <TableRow key={row.name}>
+                            <TableCell align="center">{row.sfield1}</TableCell>
+                            <TableCell align="center">{row.sfield2}</TableCell>
+                            <TableCell align="center">{row.sfield3}</TableCell>
+                            <TableCell align="center">{row.sfield4}</TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
+                </AccordionDetails>
+              </Accordion>
+            </Item>
+          </Grid>
+
+          <br></br>
+
+          <Grid xs={7.5}>
+            <Item
+              sx={{
+                borderRadius: 5,
+                boxShadow: "10px 10px 10px black",
+              }}
+            >
+              <Accordion
+                sx={{
+                  padding: "20px",
+                  border: "none",
+                  boxShadow: "none",
+                }}
               >
-                {" "}
-                <PermIdentityIcon
-                  sx={{
-                    fontWeight: "fontWeightbold",
-                    fontSize: 45,
-                    color: "#30c8c9",
-                  }}
-                />{" "}
-                Identity{" "}
-              </Box>
-              <Box sx={{ fontSize: "25px", pl: 8 }}>
-                Create and authenticate users on your site or app without
-                requiring them to use a separate service. Perfect for gated
-                content, site administration, and more.
-              </Box>
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails >
-            <TableContainer component={Paper}>
-              <Table className={classes.table} aria-label="simple table">
-                <TableHead sx={{ border: 1 }}>
-                  <TableRow>
-                    <TableCell align="center"></TableCell>
-                    <TableCell align="center">Level 1</TableCell>
-                    <TableCell align="center">Level 2</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {rows5.map((row) => (
-                    <TableRow key={row.name}>
-                      <TableCell align="center">{row.ifield1}</TableCell>
-                      <TableCell align="center">{row.ifield2}</TableCell>
-                      <TableCell align="center">{row.ifield3}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </AccordionDetails>
-        </Accordion>
-        </Item>
-        </Grid>
-        <br></br>
-        <Grid xs={7.5}>
-      <Item  sx={{
-            
-            borderRadius: 5,
-            boxShadow: "10px 10px 10px black",
-          }}>
-      <Accordion
-         sx={{
-            padding:'20px',
-         border:'none',boxShadow:'none'
-        }}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography variant="" sx={{textAlign:'left'}}>
-              <Box
-                variant="Body2"
-                sx={{ fontSize: "40px", fontWeight: "bold" }}
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="" sx={{ textAlign: "left" }}>
+                    <Box
+                      variant="Body2"
+                      sx={{ fontSize: "40px", fontWeight: "bold" }}
+                    >
+                      {" "}
+                      <LanIcon
+                        color="primary"
+                        sx={{ fontWeight: "fontWeightbold", fontSize: 45 }}
+                      />{" "}
+                      High-Performance Edge
+                    </Box>
+                    <Box sx={{ fontSize: "25px", pl: 8 }}>
+                      The premium network for mission-critical applications.
+                      Experience 30-50% faster response time and more global
+                      POPs, backed by a 99.99% uptime SLA.
+                    </Box>
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <TableContainer component={Paper}>
+                    <Table className={classes.table} aria-label="simple table">
+                      <TableHead sx={{ border: 1 }}>
+                        <TableRow>
+                          <TableCell align="center"></TableCell>
+                          <TableCell align="center">Standard</TableCell>
+                          <TableCell align="center">High-Performance</TableCell>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
+                        {rows2.map((row) => (
+                          <TableRow key={row.name}>
+                            <TableCell align="center">
+                              {row.hp1field1}
+                            </TableCell>
+                            <TableCell align="center">
+                              {row.hp1field2}
+                            </TableCell>
+                            <TableCell align="center">
+                              {row.hp1field3}
+                            </TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
+                </AccordionDetails>
+              </Accordion>
+            </Item>
+          </Grid>
+
+          <br></br>
+
+          <Grid xs={7.5}>
+            <Item
+              sx={{
+                borderRadius: 5,
+                boxShadow: "10px 10px 10px black",
+              }}
+            >
+              <Accordion
+                sx={{
+                  padding: "20px",
+                  border: "none",
+                  boxShadow: "none",
+                }}
               >
-                {" "}
-                <DesignServicesIcon
-                  sx={{
-                    fontWeight: "fontWeightbold",
-                    fontSize: 45,
-                    color: "#30c8c9",
-                  }}
-                />{" "}
-                Forms{" "}
-              </Box>
-              <Box sx={{ fontSize: "25px", pl: 8 }}>
-                Add a simple attribute to any HTML form to start receiving
-                submissions in your Netlify site admin panel, without JavaScript
-                or any backend coding.
-              </Box>
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails >
-            <TableContainer component={Paper}>
-              <Table className={classes.table} aria-label="simple table">
-                <TableHead sx={{ border: 1 }}>
-                  <TableRow>
-                    <TableCell align="center"></TableCell>
-                    <TableCell align="center">Level 1</TableCell>
-                    <TableCell align="center">Level 2</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {rows6.map((row) => (
-                    <TableRow key={row.name}>
-                      <TableCell align="center">{row.f1field1}</TableCell>
-                      <TableCell align="center">{row.f1field2}</TableCell>
-                      <TableCell align="center">{row.f1field3}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </AccordionDetails>
-        </Accordion>
-        </Item></Grid>
-        <br></br>
-        <Grid xs={7.5}>
-      <Item  sx={{
-            
-            borderRadius: 5,
-            boxShadow: "10px 10px 10px black",
-          }}>
-      <Accordion
-         sx={{
-            padding:'20px',
-         border:'none',boxShadow:'none'
-        }}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography variant="" sx={{textAlign:'left'}}>
-              <Box
-                variant="Body2"
-                sx={{ fontSize: "40px", fontWeight: "bold" }}
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="" sx={{ textAlign: "left" }}>
+                    <Box
+                      variant="Body2"
+                      sx={{ fontSize: "40px", fontWeight: "bold" }}
+                    >
+                      {" "}
+                      <BuildIcon
+                        color="primary"
+                        sx={{ fontWeight: "fontWeightbold", fontSize: 45 }}
+                      />{" "}
+                      High-Performance Build{" "}
+                    </Box>
+                    <Box sx={{ fontSize: "25px", pl: 8 }}>
+                      The premium build environment with more concurrency and
+                      processing power.
+                    </Box>
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <TableContainer component={Paper}>
+                    <Table className={classes.table} aria-label="simple table">
+                      <TableHead sx={{ border: 1 }}>
+                        <TableRow>
+                          <TableCell align="center"></TableCell>
+                          <TableCell align="center">Standard</TableCell>
+                          <TableCell align="center">High-Performance</TableCell>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
+                        {rows3.map((row) => (
+                          <TableRow key={row.name}>
+                            <TableCell align="center">
+                              {row.hp2field1}
+                            </TableCell>
+                            <TableCell align="center">
+                              {row.hp2field2}
+                            </TableCell>
+                            <TableCell align="center">
+                              {row.hp2field3}
+                            </TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
+                </AccordionDetails>
+              </Accordion>
+            </Item>
+          </Grid>
+          <br></br>
+          <div>
+            <Box
+              sx={{
+                padding: 8,
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Typography
+                variant="h2"
+                sx={{ fontWeight: "bold", textAlign: "center" }}
               >
-                {" "}
-                <FunctionsIcon
-                  sx={{
-                    fontWeight: "fontWeightbold",
-                    fontSize: 45,
-                    color: "#30c8c9",
-                  }}
-                />{" "}
-                Functions{" "}
-              </Box>
-              <Box sx={{ fontSize: "25px", pl: 8 }}>
-                Add a simple attribute to any HTML form to start receiving
-                submissions in your Netlify site admin panel, without JavaScript
-                or any backend coding.
-              </Box>
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails >
-            <TableContainer component={Paper}>
-              <Table className={classes.table} aria-label="simple table">
-                <TableHead sx={{ border: 1 }}>
-                  <TableRow>
-                    <TableCell align="center"></TableCell>
-                    <TableCell align="center">Level 1</TableCell>
-                    <TableCell align="center">Level 2</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {rows7.map((row) => (
-                    <TableRow key={row.name}>
-                      <TableCell align="center">{row.f2field1}</TableCell>
-                      <TableCell align="center">{row.f2field2}</TableCell>
-                      <TableCell align="center">{row.f2field3}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </AccordionDetails>
-        </Accordion>
-        </Item>
-        </Grid>
-        <br></br>
-        <Grid xs={7.5}>
-      <Item  sx={{
-            
-            borderRadius: 5,
-            boxShadow: "10px 10px 10px black",
-          }}>
-      <Accordion
-         sx={{
-            padding:'20px',
-         border:'none',boxShadow:'none'
-        }}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography variant="" sx={{textAlign:'left'}}>
-              <Box
-                variant="Body2"
-                sx={{ fontSize: "40px", fontWeight: "bold" }}
+                Per-site add-ons
+              </Typography>
+              <Typography variant="body1" sx={{ textAlign: "center" }}>
+                Extend your site for free with basic access to add-ons.
+                Automatically upgrade tiers as your usage grows, paying only for
+                what you use.
+              </Typography>
+            </Box>
+          </div>
+          <br></br>
+          <Grid xs={7.5}>
+            <Item
+              sx={{
+                borderRadius: 5,
+                boxShadow: "10px 10px 10px black",
+              }}
+            >
+              <Accordion
+                sx={{
+                  padding: "20px",
+                  border: "none",
+                  boxShadow: "none",
+                }}
               >
-                {" "}
-                <PermMediaIcon
-                  sx={{
-                    fontWeight: "fontWeightbold",
-                    fontSize: 45,
-                    color: "#30c8c9",
-                  }}
-                />{" "}
-                Large Media{" "}
-              </Box>
-              <Box sx={{ fontSize: "25px", pl: 8 }}>
-                Manage binary files of any size right in your repo, just like
-                code.
-              </Box>
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails  >
-            <TableContainer component={Paper} >
-              <Table className={classes.table} aria-label="simple table" sx={{width:'100%'}}>
-                <TableHead sx={{ border: 1 }}>
-                  <TableRow>
-                    <TableCell align="center"></TableCell>
-                    <TableCell align="center">Level 0</TableCell>
-                    <TableCell align="center">Level 1</TableCell>
-                    <TableCell align="center">Level 2</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {rows8.map((row) => (
-                    <TableRow key={row.name}>
-                      <TableCell align="center">{row.lfield1}</TableCell>
-                      <TableCell align="center">{row.lfield2}</TableCell>
-                      <TableCell align="center">{row.lfield3}</TableCell>
-                      <TableCell align="center">{row.lfield4}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </AccordionDetails>
-        </Accordion>
-        </Item></Grid>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="" sx={{ textAlign: "left" }}>
+                    <Box
+                      variant="Body2"
+                      sx={{ fontSize: "40px", fontWeight: "bold" }}
+                    >
+                      {" "}
+                      <AnalyticsIcon
+                        sx={{
+                          fontWeight: "fontWeightbold",
+                          fontSize: 45,
+                          color: "#30c8c9",
+                        }}
+                      />{" "}
+                      Analytics{" "}
+                    </Box>
+                    <Box sx={{ fontSize: "25px", pl: 8 }}>
+                      Netlify Analytics uses data captured directly from our
+                      servers, presented simply and beautifully. Find better
+                      accuracy, performance and privacy for your users.
+                    </Box>
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <TableContainer component={Paper}>
+                    <Table className={classes.table} aria-label="simple table">
+                      <TableHead sx={{ border: 1 }}>
+                        <TableRow>
+                          <TableCell align="center"></TableCell>
+                          <TableCell align="center">Level 1</TableCell>
+                          <TableCell align="center">Level 2</TableCell>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
+                        {rows4.map((row) => (
+                          <TableRow key={row.name}>
+                            <TableCell align="center">{row.afield1}</TableCell>
+                            <TableCell align="center">{row.afield2}</TableCell>
+                            <TableCell align="center">{row.afield3}</TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
+                </AccordionDetails>
+              </Accordion>
+            </Item>
+          </Grid>
+          <br></br>
+          <Grid xs={7.5}>
+            <Item
+              sx={{
+                borderRadius: 5,
+                boxShadow: "10px 10px 10px black",
+              }}
+            >
+              <Accordion
+                sx={{
+                  padding: "20px",
+                  border: "none",
+                  boxShadow: "none",
+                }}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="" sx={{ textAlign: "left" }}>
+                    <Box
+                      variant="Body2"
+                      sx={{ fontSize: "40px", fontWeight: "bold" }}
+                    >
+                      {" "}
+                      <PermIdentityIcon
+                        sx={{
+                          fontWeight: "fontWeightbold",
+                          fontSize: 45,
+                          color: "#30c8c9",
+                        }}
+                      />{" "}
+                      Identity{" "}
+                    </Box>
+                    <Box sx={{ fontSize: "25px", pl: 8 }}>
+                      Create and authenticate users on your site or app without
+                      requiring them to use a separate service. Perfect for
+                      gated content, site administration, and more.
+                    </Box>
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <TableContainer component={Paper}>
+                    <Table className={classes.table} aria-label="simple table">
+                      <TableHead sx={{ border: 1 }}>
+                        <TableRow>
+                          <TableCell align="center"></TableCell>
+                          <TableCell align="center">Level 1</TableCell>
+                          <TableCell align="center">Level 2</TableCell>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
+                        {rows5.map((row) => (
+                          <TableRow key={row.name}>
+                            <TableCell align="center">{row.ifield1}</TableCell>
+                            <TableCell align="center">{row.ifield2}</TableCell>
+                            <TableCell align="center">{row.ifield3}</TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
+                </AccordionDetails>
+              </Accordion>
+            </Item>
+          </Grid>
+          <br></br>
+          <Grid xs={7.5}>
+            <Item
+              sx={{
+                borderRadius: 5,
+                boxShadow: "10px 10px 10px black",
+              }}
+            >
+              <Accordion
+                sx={{
+                  padding: "20px",
+                  border: "none",
+                  boxShadow: "none",
+                }}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="" sx={{ textAlign: "left" }}>
+                    <Box
+                      variant="Body2"
+                      sx={{ fontSize: "40px", fontWeight: "bold" }}
+                    >
+                      {" "}
+                      <DesignServicesIcon
+                        sx={{
+                          fontWeight: "fontWeightbold",
+                          fontSize: 45,
+                          color: "#30c8c9",
+                        }}
+                      />{" "}
+                      Forms{" "}
+                    </Box>
+                    <Box sx={{ fontSize: "25px", pl: 8 }}>
+                      Add a simple attribute to any HTML form to start receiving
+                      submissions in your Netlify site admin panel, without
+                      JavaScript or any backend coding.
+                    </Box>
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <TableContainer component={Paper}>
+                    <Table className={classes.table} aria-label="simple table">
+                      <TableHead sx={{ border: 1 }}>
+                        <TableRow>
+                          <TableCell align="center"></TableCell>
+                          <TableCell align="center">Level 1</TableCell>
+                          <TableCell align="center">Level 2</TableCell>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
+                        {rows6.map((row) => (
+                          <TableRow key={row.name}>
+                            <TableCell align="center">{row.f1field1}</TableCell>
+                            <TableCell align="center">{row.f1field2}</TableCell>
+                            <TableCell align="center">{row.f1field3}</TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
+                </AccordionDetails>
+              </Accordion>
+            </Item>
+          </Grid>
+          <br></br>
+          <Grid xs={7.5}>
+            <Item
+              sx={{
+                borderRadius: 5,
+                boxShadow: "10px 10px 10px black",
+              }}
+            >
+              <Accordion
+                sx={{
+                  padding: "20px",
+                  border: "none",
+                  boxShadow: "none",
+                }}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="" sx={{ textAlign: "left" }}>
+                    <Box
+                      variant="Body2"
+                      sx={{ fontSize: "40px", fontWeight: "bold" }}
+                    >
+                      {" "}
+                      <FunctionsIcon
+                        sx={{
+                          fontWeight: "fontWeightbold",
+                          fontSize: 45,
+                          color: "#30c8c9",
+                        }}
+                      />{" "}
+                      Functions{" "}
+                    </Box>
+                    <Box sx={{ fontSize: "25px", pl: 8 }}>
+                      Add a simple attribute to any HTML form to start receiving
+                      submissions in your Netlify site admin panel, without
+                      JavaScript or any backend coding.
+                    </Box>
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <TableContainer component={Paper}>
+                    <Table className={classes.table} aria-label="simple table">
+                      <TableHead sx={{ border: 1 }}>
+                        <TableRow>
+                          <TableCell align="center"></TableCell>
+                          <TableCell align="center">Level 1</TableCell>
+                          <TableCell align="center">Level 2</TableCell>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
+                        {rows7.map((row) => (
+                          <TableRow key={row.name}>
+                            <TableCell align="center">{row.f2field1}</TableCell>
+                            <TableCell align="center">{row.f2field2}</TableCell>
+                            <TableCell align="center">{row.f2field3}</TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
+                </AccordionDetails>
+              </Accordion>
+            </Item>
+          </Grid>
+          <br></br>
+          <Grid xs={7.5}>
+            <Item
+              sx={{
+                borderRadius: 5,
+                boxShadow: "10px 10px 10px black",
+              }}
+            >
+              <Accordion
+                sx={{
+                  padding: "20px",
+                  border: "none",
+                  boxShadow: "none",
+                }}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="" sx={{ textAlign: "left" }}>
+                    <Box
+                      variant="Body2"
+                      sx={{ fontSize: "40px", fontWeight: "bold" }}
+                    >
+                      {" "}
+                      <PermMediaIcon
+                        sx={{
+                          fontWeight: "fontWeightbold",
+                          fontSize: 45,
+                          color: "#30c8c9",
+                        }}
+                      />{" "}
+                      Large Media{" "}
+                    </Box>
+                    <Box sx={{ fontSize: "25px", pl: 8 }}>
+                      Manage binary files of any size right in your repo, just
+                      like code.
+                    </Box>
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <TableContainer component={Paper}>
+                    <Table
+                      className={classes.table}
+                      aria-label="simple table"
+                      sx={{ width: "100%" }}
+                    >
+                      <TableHead sx={{ border: 1 }}>
+                        <TableRow>
+                          <TableCell align="center"></TableCell>
+                          <TableCell align="center">Level 0</TableCell>
+                          <TableCell align="center">Level 1</TableCell>
+                          <TableCell align="center">Level 2</TableCell>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
+                        {rows8.map((row) => (
+                          <TableRow key={row.name}>
+                            <TableCell align="center">{row.lfield1}</TableCell>
+                            <TableCell align="center">{row.lfield2}</TableCell>
+                            <TableCell align="center">{row.lfield3}</TableCell>
+                            <TableCell align="center">{row.lfield4}</TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
+                </AccordionDetails>
+              </Accordion>
+            </Item>
+          </Grid>
         </Grid>
         <br></br>
       </div>
