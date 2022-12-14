@@ -13,7 +13,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 // import AdbIcon from '@mui/icons-material/Adb';
 import SearchIcon from '@mui/icons-material/Search';
-import { makeStyles} from '@material-ui/core/styles';
+//import { makeStyles} from '@material-ui/core/styles';
 import { styled, alpha } from '@mui/material/styles';
 
 
@@ -28,26 +28,9 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-const useStyles = makeStyles(theme => ({
-    root: {
-        '& > *': {
-            margin: theme.spacing(1),
-        },
-    },
-btn: {
-    fontFamily: "Manrope",
-    borderColor: "#15e577",
-    color: "#000",
-    backgroundColor: "red", 
-    "&:hover": {
-        backgroundColor: "red",
-        borderColor:"#564345"
 
-    },
- },
-}));
+const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
 const StyledMenu = styled((props) => (
     <Menu
       elevation={0}
@@ -99,25 +82,14 @@ function ResponsiveAppBar() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
   
-  const classes = useStyles();
+
+
+
+
+  
+  
   
   return (
     
@@ -170,68 +142,25 @@ function ResponsiveAppBar() {
       >
         <MenuItem onClick={handleClose} disableRipple>
           <EditIcon />
-          Edit
+          Edge Function
         </MenuItem>
         <MenuItem onClick={handleClose} disableRipple>
           <FileCopyIcon />
-          Duplicate
+         Deploy Previews
 
         </MenuItem>
         <Divider sx={{ my: 0.5 }} />
         <MenuItem onClick={handleClose} disableRipple>
           <ArchiveIcon />
-          Archive
+          E-Commerce
         </MenuItem>
         <MenuItem onClick={handleClose} disableRipple>
           <MoreHorizIcon />
-          More
+          Web Apps
         </MenuItem>
       </StyledMenu>
     </div>
-    <div>
-      <Button
-        id="demo-customized-button1"
-        aria-controls={open ? 'demo-customized-menu1' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        variant="contained"
-        disableElevation
-        color="action"
-        sx={{textTransform:'none', fontWeight: "bold",}}
-        onClick={handleClick}
-        endIcon={<KeyboardArrowDownIcon />}
-      >
-        Solutions
-      </Button>
-     
-      <StyledMenu
-        id="demo-customized-menu1"
-        MenuListProps={{
-          'aria-labelledby': 'demo-customized-button1',
-        }}
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-      >
-        <MenuItem onClick={handleClose} disableRipple>
-          <EditIcon />
-          Edit
-        </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
-          <FileCopyIcon />
-          mohan
-        </MenuItem>
-        <Divider sx={{ my: 0.5 }} />
-        <MenuItem onClick={handleClose} disableRipple>
-          <ArchiveIcon />
-          Archive
-        </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
-          <MoreHorizIcon />
-          More
-        </MenuItem>
-      </StyledMenu>
-    </div>
+    
           <Button variant="text" size="large" color="inherit" sx={{ 
                   fontWeight: "bold",
                   textTransform: "none",color:"black"}}>
@@ -253,15 +182,7 @@ function ResponsiveAppBar() {
          
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+      
           </Box>
 
           <Box sx={{ flexGrow: 1 }}>
@@ -287,7 +208,7 @@ function ResponsiveAppBar() {
             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
-              anchorEl={anchorElUser}
+             
               anchorOrigin={{
                 vertical: 'top',
                 horizontal: 'right',
@@ -297,11 +218,11 @@ function ResponsiveAppBar() {
                 vertical: 'top',
                 horizontal: 'right',
               }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+            
+              
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                <MenuItem key={setting} >
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}

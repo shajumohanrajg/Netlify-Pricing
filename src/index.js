@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import NavBar from './components/Navbar';
+import Pricing from './components/Pricing';
 import AppBar from './components/AppBar';
 //import Nav from './components/Nav';
 import reportWebVitals from './reportWebVitals';
@@ -12,7 +12,7 @@ root.render(
   <React.StrictMode>
    <AppBar />
    
-    <NavBar />
+    <Pricing />
     <App />
   </React.StrictMode>
 );
