@@ -8,7 +8,7 @@ import List from "@mui/material/List";
 //import Carousel from 'react-grid-carousel'
 import ListItem from "@mui/material/ListItem";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import FlashOnIcon from "@mui/icons-material/FlashOn";
+import FlashOnIcon from '@mui/icons-material/FlashOn';
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import MailIcon from "@mui/icons-material/Mail";
 import TextField from "@mui/material/TextField";
@@ -54,7 +54,6 @@ import TableCell from "@material-ui/core/TableCell";
 import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
-
 //import ListItemButton from "@mui/material/ListItemButton";
 //import Divider from '@mui/material/Divider';
 //import InboxIcon from '@mui/icons-material/Inbox';
@@ -76,19 +75,11 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const useStyles = makeStyles({
   typography: {
-    fontFamily: ['"Montserrat"', "Open Sans"].join(","),
-  },
-  customTableContainer: {
-    overflowX: "initial"
-  },
-  head: {
-    backgroundColor: "#fff",
-    position: "sticky",
-    top: 0
-  },
+    fontFamily: ['"Montserrat"', 'Open Sans'].join(',')
+   },
   table: {
     minWidth: 100,
-width:'100%',
+
     "& .MuiTableCell-root": {
       border: "1px solid rgba(224, 224, 224, 1)",
       height: 35,
@@ -116,8 +107,10 @@ width:'100%',
     justifyContent: "center",
   },
   item: {
+
     justifyContent: "center",
     display: "flex",
+  
   },
 });
 function createsData(sfield1, sfield2, sfield3, sfield4) {
@@ -367,11 +360,13 @@ const rows8 = [
 export default function BasicGrid() {
   const classes = useStyles();
   return (
+    
     <Box sx={{ background: "white" }}>
-      <div sx={{ padding: "70px" }}>
+  
+      <div sx={{padding:'70px'}}>
         <Typography
           variant="h2"
-          sx={{ fontWeight: "bold", textAlign: "center", padding: "25px",paddingTop:'80px' }}
+          sx={{ fontWeight: "bold", textAlign: "center" ,padding:'25px' }}
         >
           Netlify Pricing
         </Typography>
@@ -389,7 +384,7 @@ export default function BasicGrid() {
               className={classes.item}
               sx={{
                 height: "750px",
-
+                boxShadow: "10px 10px 10px black",
                 borderRadius: 2,
                 padding: "20px",
                 borderTop: 3,
@@ -408,7 +403,6 @@ export default function BasicGrid() {
                   sx={{
                     maxWidth: 345,
                     paddingBottom: "20px",
-                    height:'190px',
                     border: "none",
                     boxShadow: "none",
                   }}
@@ -485,11 +479,10 @@ export default function BasicGrid() {
             <Item
               sx={{
                 height: "750px",
-
+                boxShadow: "10px 10px 10px black",
                 borderRadius: 2,
                 padding: "20px",
-                border:4 ,
-                borderColor:'#30c8c9',
+                borderTop: 3,
                 borderTopLeftRadius: 50,
               }}
             >
@@ -505,8 +498,6 @@ export default function BasicGrid() {
                     paddingBottom: "20px",
                     border: "none",
                     boxShadow: "none",
-                    
-                    height:'190px',
                   }}
                 >
                   <CardContent>
@@ -600,7 +591,7 @@ export default function BasicGrid() {
             <Item
               sx={{
                 height: "750px",
-
+                boxShadow: "10px 10px 10px black",
                 borderRadius: 2,
                 padding: "20px",
                 borderTop: 3,
@@ -620,7 +611,6 @@ export default function BasicGrid() {
                     paddingBottom: "20px",
                     border: "none",
                     boxShadow: "none",
-                    height:'190px',
                   }}
                 >
                   <CardContent>
@@ -726,7 +716,7 @@ export default function BasicGrid() {
             <Item
               sx={{
                 height: "750px",
-
+                boxShadow: "10px 10px 10px black",
                 borderRadius: 2,
                 padding: "20px",
                 borderTop: 3,
@@ -746,7 +736,6 @@ export default function BasicGrid() {
                     paddingBottom: "20px",
                     border: "none",
                     boxShadow: "none",
-                    height:'190px', 
                   }}
                 >
                   <CardContent>
@@ -839,21 +828,15 @@ export default function BasicGrid() {
         </Grid>
       </div>
       <br></br>
-  
-      <Box sx={{ padding: "50px" }}>
-        <Typography
-          variant="h5"
-          sx={{ textAlign: "center", fontWeight: "bold" }}
-        >
-          Fast, dynamic web experiences powered by Netlify
-        </Typography>
+      <Box sx={{padding:"50px"}}>
+        <Typography variant="h5" sx={{textAlign: "center",fontWeight:'bold'}}>Fast, dynamic web experiences powered by Netlify</Typography>
       </Box>
       <div>
-    
-        <TableContainer sx={{ justifyContent: "center" }} className={classes.head}>
+        <TableContainer sx={{ justifyContent: "center" }}>
           <Table
-            className={classes.table1} 
-            stickyHeader aria-label="sticky table"
+            className={classes.table1}
+            stickyHeader
+            aria-label="sticky table"
           >
             <TableHead sx={{ border: 1 }}>
               <TableRow>
@@ -953,9 +936,9 @@ export default function BasicGrid() {
                   </Card>
                 </TableCell>
               </TableRow>
-              <TableRow >
-                <TableCell align="" colSpan={4} >
-                  <Typography variant="h5" >
+              <TableRow>
+                <TableCell align="" colSpan={4}>
+                  <Typography variant="h5">
                     Only pay for the capacity you use
                   </Typography>
                 </TableCell>
@@ -973,7 +956,6 @@ export default function BasicGrid() {
             </TableBody>
           </Table>
         </TableContainer>
-        
       </div>
       <br></br>
       <div>
@@ -1000,14 +982,12 @@ export default function BasicGrid() {
                 }}
               >
                 <CardActions>
-                  <FlashOnIcon
-                    sx={{ fontSize: 50, color: lime[500] }}
-                  ></FlashOnIcon>
+                <FlashOnIcon sx={{ fontSize: 50, color: lime[500]  }}></FlashOnIcon>
                   <Typography
                     gutterBottom
                     variant="h5"
                     component="div"
-                    sx={{ color: "white", paddingRight: "20px", pl: "20px" }}
+                    sx={{ color: "white",paddingRight:'20px',pl:'20px' }}
                   >
                     Take advantage of all of our pro developer resources
                   </Typography>
@@ -1042,34 +1022,22 @@ export default function BasicGrid() {
           </Box>
         </div>
         <br></br>
-        <Grid
-    container
-    spacing={4}
-    direction="row"
-    justifyContent="center"
-    alignItems="center"
-    alignContent="center"
-  
-    
-  >
-    <Grid xs={7.5} >
-      <Item  sx={{
-            
+
+        <Accordion
+          sx={{
+            ml: 50,
+            mr: 50,
+            padding: "40px",
             borderRadius: 5,
             boxShadow: "10px 10px 10px black",
-          }}>
-      <Accordion
-         sx={{
-            padding:'20px',
-         border:'none',boxShadow:'none'
-        }}
+          }}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography variant="" sx={{textAlign:'left'}}>
+            <Typography variant="">
               <Box
                 variant="Body2"
                 sx={{ fontSize: "40px", fontWeight: "bold" }}
@@ -1115,31 +1083,25 @@ export default function BasicGrid() {
             </TableContainer>
           </AccordionDetails>
         </Accordion>
-      </Item>
-    </Grid>
-    
- 
         <br></br>
- 
-    <Grid xs={7.5}>
-      <Item  sx={{
+        <Accordion
+          sx={{
+            ml: 50,
+            mr: 50,
+            padding: "40px",
             borderRadius: 5,
             boxShadow: "10px 10px 10px black",
-          }}>
-      <Accordion
-         sx={{
-            padding:'20px',
-         border:'none',boxShadow:'none'
-        }}>
+          }}
+        >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography variant="" sx={{textAlign:'left' }}>
+            <Typography variant="">
               <Box
                 variant="Body2"
-                sx={{ fontSize: "40px", fontWeight: "bold",}}
+                sx={{ fontSize: "40px", fontWeight: "bold" }}
               >
                 {" "}
                 <LanIcon
@@ -1178,31 +1140,22 @@ export default function BasicGrid() {
             </TableContainer>
           </AccordionDetails>
         </Accordion>
-        
-          
-        </Item>
-        </Grid>
-        
         <br></br>
- 
-    <Grid xs={7.5}>
-      <Item  sx={{
-            
+        <Accordion
+          sx={{
+            ml: 50,
+            mr: 50,
+            padding: "40px",
             borderRadius: 5,
             boxShadow: "10px 10px 10px black",
-          }}>
-      <Accordion
-         sx={{
-            padding:'20px',
-         border:'none',boxShadow:'none'
-        }}
+          }}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography variant="" sx={{textAlign:'left'}}>
+            <Typography variant="">
               <Box
                 variant="Body2"
                 sx={{ fontSize: "40px", fontWeight: "bold" }}
@@ -1220,7 +1173,7 @@ export default function BasicGrid() {
               </Box>
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ ml: 50, mr: 50 }}>
             <TableContainer component={Paper}>
               <Table className={classes.table} aria-label="simple table">
                 <TableHead sx={{ border: 1 }}>
@@ -1243,8 +1196,6 @@ export default function BasicGrid() {
             </TableContainer>
           </AccordionDetails>
         </Accordion>
-        </Item>
-        </Grid>
         <br></br>
         <div>
           <Box
@@ -1264,24 +1215,21 @@ export default function BasicGrid() {
           </Box>
         </div>
         <br></br>
-        <Grid xs={7.5}>
-      <Item  sx={{
-            
+        <Accordion
+          sx={{
+            ml: 50,
+            mr: 50,
+            padding: "40px",
             borderRadius: 5,
             boxShadow: "10px 10px 10px black",
-          }}>
-      <Accordion
-         sx={{
-            padding:'20px',
-         border:'none',boxShadow:'none'
-        }}
+          }}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography variant="" sx={{textAlign:'left'}}>
+            <Typography variant="">
               <Box
                 variant="Body2"
                 sx={{ fontSize: "40px", fontWeight: "bold" }}
@@ -1303,7 +1251,7 @@ export default function BasicGrid() {
               </Box>
             </Typography>
           </AccordionSummary>
-          <AccordionDetails >
+          <AccordionDetails sx={{ ml: 50, mr: 50 }}>
             <TableContainer component={Paper}>
               <Table className={classes.table} aria-label="simple table">
                 <TableHead sx={{ border: 1 }}>
@@ -1326,26 +1274,22 @@ export default function BasicGrid() {
             </TableContainer>
           </AccordionDetails>
         </Accordion>
-        </Item></Grid>
         <br></br>
-        <Grid xs={7.5}>
-      <Item  sx={{
-            
+        <Accordion
+          sx={{
+            ml: 50,
+            mr: 50,
+            padding: "40px",
             borderRadius: 5,
             boxShadow: "10px 10px 10px black",
-          }}>
-      <Accordion
-         sx={{
-            padding:'20px',
-         border:'none',boxShadow:'none'
-        }}
+          }}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography variant="" sx={{textAlign:'left'}}>
+            <Typography variant="">
               <Box
                 variant="Body2"
                 sx={{ fontSize: "40px", fontWeight: "bold" }}
@@ -1367,7 +1311,7 @@ export default function BasicGrid() {
               </Box>
             </Typography>
           </AccordionSummary>
-          <AccordionDetails >
+          <AccordionDetails sx={{ ml: 50, mr: 50 }}>
             <TableContainer component={Paper}>
               <Table className={classes.table} aria-label="simple table">
                 <TableHead sx={{ border: 1 }}>
@@ -1390,27 +1334,22 @@ export default function BasicGrid() {
             </TableContainer>
           </AccordionDetails>
         </Accordion>
-        </Item>
-        </Grid>
         <br></br>
-        <Grid xs={7.5}>
-      <Item  sx={{
-            
+        <Accordion
+          sx={{
+            ml: 50,
+            mr: 50,
+            padding: "40px",
             borderRadius: 5,
             boxShadow: "10px 10px 10px black",
-          }}>
-      <Accordion
-         sx={{
-            padding:'20px',
-         border:'none',boxShadow:'none'
-        }}
+          }}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography variant="" sx={{textAlign:'left'}}>
+            <Typography variant="">
               <Box
                 variant="Body2"
                 sx={{ fontSize: "40px", fontWeight: "bold" }}
@@ -1432,7 +1371,7 @@ export default function BasicGrid() {
               </Box>
             </Typography>
           </AccordionSummary>
-          <AccordionDetails >
+          <AccordionDetails sx={{ ml: 50, mr: 50 }}>
             <TableContainer component={Paper}>
               <Table className={classes.table} aria-label="simple table">
                 <TableHead sx={{ border: 1 }}>
@@ -1455,26 +1394,23 @@ export default function BasicGrid() {
             </TableContainer>
           </AccordionDetails>
         </Accordion>
-        </Item></Grid>
         <br></br>
-        <Grid xs={7.5}>
-      <Item  sx={{
-            
+        <Accordion
+          sx={{
+            ml: 50,
+            mr: 50,
+            padding: "40px",
             borderRadius: 5,
             boxShadow: "10px 10px 10px black",
-          }}>
-      <Accordion
-         sx={{
-            padding:'20px',
-         border:'none',boxShadow:'none'
-        }}
+            borderTopColor: "green",
+          }}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography variant="" sx={{textAlign:'left'}}>
+            <Typography variant="">
               <Box
                 variant="Body2"
                 sx={{ fontSize: "40px", fontWeight: "bold" }}
@@ -1496,7 +1432,7 @@ export default function BasicGrid() {
               </Box>
             </Typography>
           </AccordionSummary>
-          <AccordionDetails >
+          <AccordionDetails sx={{ ml: 50, mr: 50 }}>
             <TableContainer component={Paper}>
               <Table className={classes.table} aria-label="simple table">
                 <TableHead sx={{ border: 1 }}>
@@ -1519,27 +1455,22 @@ export default function BasicGrid() {
             </TableContainer>
           </AccordionDetails>
         </Accordion>
-        </Item>
-        </Grid>
         <br></br>
-        <Grid xs={7.5}>
-      <Item  sx={{
-            
+        <Accordion
+          sx={{
+            ml: 50,
+            mr: 50,
+            padding: "40px",
             borderRadius: 5,
             boxShadow: "10px 10px 10px black",
-          }}>
-      <Accordion
-         sx={{
-            padding:'20px',
-         border:'none',boxShadow:'none'
-        }}
+          }}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography variant="" sx={{textAlign:'left'}}>
+            <Typography variant="">
               <Box
                 variant="Body2"
                 sx={{ fontSize: "40px", fontWeight: "bold" }}
@@ -1560,9 +1491,9 @@ export default function BasicGrid() {
               </Box>
             </Typography>
           </AccordionSummary>
-          <AccordionDetails  >
-            <TableContainer component={Paper} >
-              <Table className={classes.table} aria-label="simple table" sx={{width:'100%'}}>
+          <AccordionDetails sx={{ ml: 50, mr: 50 }}>
+            <TableContainer component={Paper}>
+              <Table className={classes.table} aria-label="simple table">
                 <TableHead sx={{ border: 1 }}>
                   <TableRow>
                     <TableCell align="center"></TableCell>
@@ -1585,8 +1516,6 @@ export default function BasicGrid() {
             </TableContainer>
           </AccordionDetails>
         </Accordion>
-        </Item></Grid>
-        </Grid>
         <br></br>
       </div>
       <br></br>
@@ -1814,49 +1743,32 @@ export default function BasicGrid() {
 
       <br></br>
       <Box sx={{ width: "100%" }}>
-        <Grid
-          container
-          rowSpacing={1}
-          columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-          sx={{ background: "transparent" }}
-          justifyContent="center"
-        >
+        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{background:"transparent",}} justifyContent="center">
           <Grid xs={1.6}>
-            <Item sx={{ background: "transparent", boxShadow: "none" }}>
-              <Box
-                sx={{
-                  fontSize: "12px",
-                  fontWeight: "bold",
-                  textTransform: "none",
-                }}
+            <Item sx={{background:"transparent",boxShadow:"none"}}>
+            <Box
+                
+                sx={{ fontSize: '12px', fontWeight:'bold', textTransform: 'none' }}
               >
-                <Typography sx={{ fontWeight: "bold", textAlign: "left" }}>
-                  Why Netlify
-                </Typography>
+                <Typography sx={{fontWeight:'bold',textAlign:'left'}}>Why Netlify</Typography>
               </Box>
               <List>
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Customers
-                  </Button>
+                  <Button sx={{ textTransform: "none",color:'black' }}>Customers</Button>
                 </ListItem>
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Enterprise
-                  </Button>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>Enterprise</Button>
                 </ListItem>
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Resources
-                  </Button>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>Resources</Button>
                 </ListItem>
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>
                     Agency Partner Program
                   </Button>
                 </ListItem>
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>
                     Technology Partner Program
                   </Button>
                 </ListItem>
@@ -1864,239 +1776,182 @@ export default function BasicGrid() {
             </Item>
           </Grid>
           <Grid xs={1}>
-            <Item sx={{ background: "transparent", boxShadow: "none" }}>
-              <Box
-                sx={{
-                  fontSize: "12px",
-                  fontWeight: "bold",
-                  textTransform: "none",
-                }}
+            <Item sx={{background:"transparent",boxShadow:"none"}}>
+            <Box
+                
+                sx={{ fontSize: '12px', fontWeight:'bold', textTransform: 'none' }}
               >
-                <Typography sx={{ fontWeight: "bold", textAlign: "left" }}>
-                  Products
-                </Typography>
-              </Box>
-              <List>
+                <Typography sx={{fontWeight:'bold',textAlign:'left'}}>Products</Typography>
+              </Box><List>
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Platform
+                  <Button  sx={{ textTransform: "none",color:'black' }}>Platform</Button>
+                </ListItem>
+                <ListItem disablePadding>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>Netlify Build</Button>
+                </ListItem>
+                <ListItem disablePadding>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>Netlify Edge</Button>
+                </ListItem>
+                <ListItem disablePadding>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>
+                  Netlify CLI
                   </Button>
                 </ListItem>
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Netlify Build
+                  <Button  sx={{ textTransform: "none",color:'black' }}>
+                  Pricing
                   </Button>
                 </ListItem>
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Netlify Edge
+                  <Button  sx={{ textTransform: "none",color:'black' }}>
+                  Add-ons
                   </Button>
                 </ListItem>
-                <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Netlify CLI
-                  </Button>
-                </ListItem>
-                <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Pricing
-                  </Button>
-                </ListItem>
-                <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Add-ons
-                  </Button>
-                </ListItem>
-              </List>
-            </Item>
+              </List></Item>
           </Grid>
           <Grid xs={1}>
-            <Item sx={{ background: "transparent", boxShadow: "none" }}>
-              <Box
-                sx={{
-                  fontSize: "12px",
-                  fontWeight: "bold",
-                  textTransform: "none",
-                }}
+            <Item sx={{background:"transparent",boxShadow:"none"}}>
+            <Box
+                
+                sx={{ fontSize: '12px', fontWeight:'bold', textTransform: 'none' }}
               >
-                <Typography sx={{ fontWeight: "bold", textAlign: "left" }}>
-                  Learn
-                </Typography>
-              </Box>
-              <List>
+                <Typography sx={{fontWeight:'bold',textAlign:'left'}}>Learn</Typography>
+              </Box><List>
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Docs
+                  <Button  sx={{ textTransform: "none",color:'black' }}>Docs</Button>
+                </ListItem>
+                <ListItem disablePadding>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>Open Source</Button>
+                </ListItem>
+                <ListItem disablePadding>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>Jamstack book</Button>
+                </ListItem>
+                <ListItem disablePadding>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>
+                  Community
                   </Button>
                 </ListItem>
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Open Source
+                  <Button  sx={{ textTransform: "none",color:'black' }}>
+                  Security
                   </Button>
                 </ListItem>
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Jamstack book
+                  <Button  sx={{ textTransform: "none",color:'black' }}>
+                  Site Speed Test
                   </Button>
                 </ListItem>
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Community
+                  <Button  sx={{ textTransform: "none",color:'black' }}>
+                  Technologies
                   </Button>
                 </ListItem>
-                <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Security
-                  </Button>
-                </ListItem>
-                <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Site Speed Test
-                  </Button>
-                </ListItem>
-                <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Technologies
-                  </Button>
-                </ListItem>
-              </List>
-            </Item>
+              </List></Item>
           </Grid>
           <Grid xs={1}>
-            <Item sx={{ background: "transparent", boxShadow: "none" }}>
-              <Box
-                sx={{
-                  fontSize: "12px",
-                  fontWeight: "bold",
-                  textTransform: "none",
-                }}
+            <Item sx={{background:"transparent",boxShadow:"none"}}>
+            <Box
+                
+                sx={{ fontSize: '12px', fontWeight:'bold', textTransform: 'none' }}
               >
-                <Typography sx={{ fontWeight: "bold", textAlign: "left" }}>
-                  Contact us
-                </Typography>
-              </Box>
-              <List>
+                <Typography sx={{fontWeight:'bold',textAlign:'left'}}>Contact us</Typography>
+              </Box><List>
+           
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Sales
+                  <Button  sx={{ textTransform: "none",color:'black' }}>Sales</Button>
+                </ListItem>
+                <ListItem disablePadding>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>Support</Button>
+                </ListItem>
+                <ListItem disablePadding>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>Status</Button>
+                </ListItem>
+                <ListItem disablePadding>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>
+                  Forums
                   </Button>
                 </ListItem>
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Support
+                  <Button  sx={{ textTransform: "none",color:'black' }}>
+                  Hire an expert
                   </Button>
                 </ListItem>
-                <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Status
-                  </Button>
-                </ListItem>
-                <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Forums
-                  </Button>
-                </ListItem>
-                <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Hire an expert
-                  </Button>
-                </ListItem>
-              </List>
-            </Item>
+             
+              </List></Item>
           </Grid>
           <Grid xs={1}>
-            <Item sx={{ background: "transparent", boxShadow: "none" }}>
-              <Box
-                sx={{
-                  fontSize: "12px",
-                  fontWeight: "bold",
-                  textTransform: "none",
-                }}
+            <Item sx={{background:"transparent",boxShadow:"none"}}>
+            <Box
+                
+                sx={{ fontSize: '12px', fontWeight:'bold', textTransform: 'none', }}
               >
-                <Typography sx={{ fontWeight: "bold", textAlign: "left" }}>
-                  Company
-                </Typography>
-              </Box>
-              <List>
+                <Typography sx={{fontWeight:'bold',textAlign:'left'}}>Company</Typography>
+              </Box><List>
+              
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Blog
+                  <Button  sx={{ textTransform: "none",color:'black' }}>Blog</Button>
+                </ListItem>
+                <ListItem disablePadding>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>About</Button>
+                </ListItem>
+                <ListItem disablePadding>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>Careers</Button>
+                </ListItem>
+                <ListItem disablePadding>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>
+                  Press
                   </Button>
                 </ListItem>
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    About
+                  <Button  sx={{ textTransform: "none",color:'black' }}>
+                  Jamstack Fund
                   </Button>
                 </ListItem>
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Careers
+                  <Button  sx={{ textTransform: "none",color:'black' }}>
+                  Netlify Store
                   </Button>
                 </ListItem>
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Press
+                  <Button  sx={{ textTransform: "none",color:'black' }}>
+                  Sustainability
                   </Button>
                 </ListItem>
-                <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Jamstack Fund
-                  </Button>
-                </ListItem>
-                <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Netlify Store
-                  </Button>
-                </ListItem>
-                <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Sustainability
-                  </Button>
-                </ListItem>
-              </List>
-            </Item>
+             
+              </List></Item>
           </Grid>
           <Grid xs={1}>
-            <Item sx={{ background: "transparent", boxShadow: "none" }}>
-              <Box
-                sx={{
-                  fontSize: "12px",
-                  fontWeight: "bold",
-                  textTransform: "none",
-                }}
+            <Item sx={{background:"transparent",boxShadow:"none"}}>
+            <Box
+                
+                sx={{ fontSize: '12px', fontWeight:'bold', textTransform: 'none' }}
               >
-                <Typography sx={{ fontWeight: "bold", textAlign: "left" }}>
-                  Trust
-                </Typography>
-              </Box>
-              <List>
+                <Typography sx={{fontWeight:'bold',textAlign:'left'}}>Trust</Typography>
+              </Box><List>
+         
+
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Trust Center
+                  <Button  sx={{ textTransform: "none",color:'black' }}>Trust Center</Button>
+                </ListItem>
+                <ListItem disablePadding>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>Privacy</Button>
+                </ListItem>
+                <ListItem disablePadding>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>Security</Button>
+                </ListItem>
+                <ListItem disablePadding>
+                  <Button  sx={{ textTransform: "none",color:'black' }}>
+                  GDPR/CCPA
                   </Button>
                 </ListItem>
                 <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Privacy
+                  <Button  sx={{ textTransform: "none",color:'black' }}>
+                  Abuse
                   </Button>
                 </ListItem>
-                <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Security
-                  </Button>
-                </ListItem>
-                <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    GDPR/CCPA
-                  </Button>
-                </ListItem>
-                <ListItem disablePadding>
-                  <Button sx={{ textTransform: "none", color: "black" }}>
-                    Abuse
-                  </Button>
-                </ListItem>
-              </List>
-            </Item>
+           
+             
+              </List></Item>
           </Grid>
         </Grid>
       </Box>
@@ -2131,7 +1986,13 @@ export default function BasicGrid() {
           <IconButton>
             <YouTubeIcon sx={{ color: red[500] }} />
           </IconButton>
+
         </Box>
+     
+
+
+
+     
       </Box>
     </Box>
   );
